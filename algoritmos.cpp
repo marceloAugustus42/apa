@@ -44,7 +44,7 @@ void ord_flutuacao(int *v, int tam){
     exibir_vetor(v, tam);
     
 }
-
+// :)
 int main(){
     srand(time(NULL));
     int tam = 100;

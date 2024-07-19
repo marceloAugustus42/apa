@@ -8,6 +8,21 @@ void exibir_vetor(int *v, int tam){
     }
 }
 
+void ord_insercao(int *v, int tam){
+    for (int i = 1; i < tam; i++){
+        int chave = v[i];
+        int j = i - 1;
+        while (j>=0 && v[j]>chave){
+            v[j+1] = v[j];
+            j = j - 1;
+        }
+        v[j + 1] = chave;
+    }
+    cout << "ORDENADO POR INSERCAO: ";
+    exibir_vetor(v, tam);
+    
+}
+
 void ord_selecao(int *v, int tam){
     int aux;
     for (int i = 0; i < tam; i++){
@@ -57,6 +72,6 @@ int main(){
     }
     exibir_vetor(vetor, tam);
     cout << endl;
-    ord_flutuacao(vetor, tam);
+    ord_insercao(vetor, tam);
     cout << endl;
 }
